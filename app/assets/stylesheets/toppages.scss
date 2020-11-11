@@ -1,0 +1,230 @@
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #565656;
+}
+
+.top-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.brand-logo {
+  font-size: 2rem;
+  margin: 10px 0 0 40px;
+}
+
+.home-nav {
+  display: flex;
+  list-style: none;
+  margin-top: 20px;
+}
+
+.home-nav li {
+  margin-right: 36px;
+}
+
+.home-nav a{
+  color: #21252A;
+  font-size: 1.5rem;
+  border: solid 2px #21252A;
+  border-radius: 5px;
+  padding: 0 5px;
+}
+
+.big-bg {
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  font-family: 'Kaushan Script', cursive;
+}
+
+#home {
+  background-image: image-url('people-2604837_1920.jpg');
+  min-height: 100vh;
+}
+
+.home-content {
+  text-align: center;
+  padding: 230px 650px 0 0;
+}
+
+.home-content h2 {
+  
+  font-size: 7rem;
+}
+
+.home-content p {
+  font-size: 1.8rem;
+}
+
+.top-button {
+  color: #21252A;
+  font-size: 1.8rem;
+  border: 2px solid #21252A;
+  border-radius: 5px;
+  padding: 0 6px 0 6px;
+  
+}
+
+.top-button:hover {
+  color: #21252A;
+}
+
+
+// メインコンテンツ
+
+
+.main-content {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.content-intro {
+  font-size: 2.3rem;
+  color: #565656;
+  font-weight: 800;
+  text-align: center;
+  margin-top: 100px;
+  padding-bottom: 90px;
+  border-bottom: solid 1px rgb(214,194,153);
+}
+
+
+
+.function-list-title {
+  text-align: center;
+  margin: 40px 0 100px 0 ;
+}
+
+.function-list-title span {
+  padding: 0 50px 2px 50px;
+  border-bottom: solid 2px #21252A;
+  font-size: 6rem;
+}
+
+
+.container {
+  padding-bottom: 80px;
+}
+
+.list-img img {
+  width: 90%;
+  height: auto;
+  object-fit: cover;
+  
+}
+
+.img_1 {
+  margin-left: 40px;
+}
+
+
+.list-text {
+  color: #565656;
+}
+
+.list-text-title {
+  font-size: 2rem;
+  font-weight: 800;
+  border-bottom: solid 1px rgb(214,194,153);
+}
+
+.text-content {
+  font-size: 1.2rem;
+  padding-top: 25px;
+}
+
+.text_2 {
+padding-left:60px;
+}
+
+
+
+// ボトム会員登録
+// .bottom-signup {
+//   margin: 100px 0 0 0;
+//   color: #565656;
+// }
+
+
+.eye-chatch {
+  text-align: center;
+  font-size: 3rem;
+  border-bottom: solid 1px rgb(214,194,153);
+  margin: 120px 0 0 0;
+  color: #565656;
+}
+
+.bottom-button {
+  color: white;
+  font-size: 2.6rem;
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 0 10px 0 6px;
+}
+
+.bottom-signup  {
+  padding: 100px 0 80px 0;
+  font-size: 2.5rem;
+  height: 700px;
+}
+
+.bt-img {
+  background-image: url('bottom-picture4.jpg');
+  width: 80%;
+  height: 450px;
+  margin: 0 auto;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.bt-content {
+  position: absolute;
+  top: 155px;
+  left: 180px;
+  text-align: center;
+  color: white;
+}
+
+.bt-content div {
+  margin-bottom: 35px;
+}
+
+// ボトム
+.bottom {
+  text-align: center;
+  padding: 20px 0 ;
+  background-color: rgb(214,194,153);
+}
+
+
+
+
+
+
+
+// メディアクエリ
+@media screen and (max-width: 768px){
+  .list-text-title {
+    text-align: center;
+  }
+  
+  .list-text {
+    order: 2;
+  }
+  
+  .list-img img {
+    order: 1;
+    margin: 0 0 10px 0;
+  }
+  
+  .text_2 {
+    padding: 0;
+  }
+}

@@ -13,3 +13,17 @@
  *= require_tree .
  *= require_self
  */
+ 
+
+.font-select {
+    font-family: 'Kaushan Script', cursive;
+}
+
+.btn {
+    background-color: #565656;
+    color: white;
+}
+
+body {
+    background-color: rgb(246,239,219);
+}

@@ -1,0 +1,85 @@
+
+<div class="bg-set bg-color">
+  
+  <div id="home" class="big-bg" >
+    <div class="top-header">
+      <div class="brand-logo">BR</div>
+      <nav>
+        <ul class="home-nav">
+          <li><%= link_to "Signup", signup_path %></li>
+          <li><a href="#">login</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="home-content">
+      <h2>Book Record</h2>
+      <p>You can manege your book by this application</p>
+      <p>Let's make bookshelf only you</p>
+      <%= link_to "Signup", signup_path, class: "top-button"%>
+    </div>
+  </div>
+  
+  <div class="main-content">
+    <div class="content-intro">
+      <p>Book Recordは書籍を管理するためのアプリケーションです</p>
+      <p>あなただけの本棚を作成しましょう</p>
+    </div>
+    <div class="function-list-title">
+      <span class="font-select">Function</span>
+    </div>
+    
+    <div class="function-list">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 list-text align-self-center text_3">
+            <p class="list-text-title">書籍の登録</p>
+            <p class="text-content">所有する書籍を登録することで、現在の所有状況の把握・確認が容易になり、あなたの本棚の整理に役立ちます。</p>
+          </div>
+          <div class="col-md-6 list-img">
+            <img class="img_1" src="/assets/function-list1-1.jpg" alt="書籍の登録">
+          </div>
+        </div>
+      </div>
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 list-img">
+            <img class="img_2" src="/assets/function-list2.jpg" alt="未所持の書籍を登録">
+          </div>
+          <div class="col-md-6 list-text align-self-center text_2">
+            <p class="list-text-title">未所持の書籍を登録</p>
+            <p class="text-content">未所持の書籍、あるいは、購入を予定している書籍を未所持として登録することで、気になる書籍の情報を記録として残すことができます。</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 list-text align-self-center text_3">
+            <p class="list-text-title">お気に入り機能</p>
+            <p class="text-content">お気に入り機能が付いているので、あなたの心に残った書籍が一目瞭然になります。</p>
+          </div>
+          <div class="col-md-6 list-img">
+            <img class="img_1" src="/assets/function-list3.jpg" alt="お気に入り機能">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <p class="eye-chatch">あなたの読書ライフをより快適なものに</p>
+  <div class="bottom-signup">
+    <div class="bt-img">
+      <div class="bt-content">
+        <div>ご登録はこちらから</div>
+        <%= link_to "Signup", signup_path, class: "bottom-button font-select"%>
+      </div>
+    </div>
+  </div>
+  
+  <!--ボトム-->
+  <div class="bottom">
+    <small>&copy; 2020 book-record All Rights Reserved.</small>
+  </div>
+</div>
+
