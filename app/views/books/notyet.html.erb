@@ -1,0 +1,7 @@
+<%=render "layouts/navbar"%>
+<%= link_to '新規作成', new_book_path %>
+<div>
+  <% @books.each do |book| %>
+    <li><%= link_to book.id, book %> : <%= book.title %></li>
+  <% end %>
+</div>

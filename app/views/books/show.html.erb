@@ -1,0 +1,31 @@
+<%=render "layouts/navbar"%>
+<div class="user-prof">
+    <div class="prof-set">
+      名前：<%= @book.title%>
+    </div>
+    <div class="prof-set">
+      文庫名：<%= @book.library%>
+    </div>
+      
+      <!--登録した書籍の総数を表示予定-->
+    <div class="prof-set">
+      所有状況：<%= @status%>
+    </div>
+    
+    <div class="prof-set">
+      メモ：<%= @book.memo%>
+    </div>
+    
+    <div class="prof-set">
+      表紙画像：<%= image_tag(@book.image.to_s) %>
+    </div>
+    
+    <div>
+      <%= link_to '書籍情報の変更', edit_book_path(@book)%>
+    </div>
+    <div>
+      <%= link_to "削除する", @book, method: :delete, data: { confirm: "削除しますか?" } %>
+    </div>
+</div>
+    
+    

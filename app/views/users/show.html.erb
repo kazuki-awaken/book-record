@@ -1,15 +1,25 @@
 <%=render "layouts/navbar"%>
-<div class="user-prof">
-  <div class="prof-set">
-    名前：<%= @user.name%>
-  </div>
-  <div class="prof-set">
-    メール：<%= @user.email%>
-  </div>
+  <div class="user-prof">
+    <div class="prof-set">
+      名前：<%= @user.name%>
+    </div>
+    <div class="prof-set">
+      メール：<%= @user.email%>
+    </div>
+      
+      <!--登録した書籍の総数を表示予定-->
+    <div class="prof-set">
+      <p>書籍数</p>
+      <ul>
+        <li>所有書籍：</li>
+        <li>未所持書籍：</li>
+      </ul> 
+    </div>
     
-    <!--登録した書籍の総数を表示予定-->
-  <div class="prof-set">
-     <%= @user.name%>
+    <div>
+      <%= link_to 'ユーザー情報の変更', edit_user_path(@user) %>
+    </div>
+    <div>
+      退会
+    </div>
   </div>
-
-</div>

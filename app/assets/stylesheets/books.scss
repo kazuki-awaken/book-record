@@ -1,0 +1,15 @@
+// Place all the styles related to the Books controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.gradation-content {
+  text-align: center;
+  font-size: 2.5rem;
+  padding-top: 20px;
+}
+
+#gradation-image {
+  height: 120px;
+  background: -moz-linear-gradient(top, #FFC778, #FFF);
+  background: -webkit-linear-gradient(top, #FFC778, #FFF);
+  background: linear-gradient(to bottom, #FFC778, #FFF);
+}
