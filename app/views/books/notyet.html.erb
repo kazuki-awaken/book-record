@@ -1,7 +1,35 @@
 <%=render "layouts/navbar"%>
-<%= link_to '新規作成', new_book_path %>
+
+<div id="gradation-image" class="mb-3">
+  <div class="font-select">
+    <p class="gradation-content">Book Record</p>
+  </div>
+</div>
+
+<ul class="nav nav-tabs nav-justified mb-3">
+  <li class="nav-item"><a href="<%= own_books_path %>" class="nav-link <%= 'active' if current_page?(own_books_path) %>">所有済み  <span class="badge badge-secondary"><%= @count_own %></span></a></li>
+  <li class="nav-item"><a href="<%= notyet_books_path %>" class="nav-link <%= 'active' if current_page?(notyet_books_path) %>">未所有<span class="badge badge-secondary"><%= @count_notyet %></span></a></li>
+  <li class="nav-item"><a href="<%= likes_books_path %>" class="nav-link <%= 'active' if current_page?(likes_books_path) %>">お気に入り<span class="badge badge-secondary"><%= @count_favorites %></span></a></li>
+</ul>
+
 <div>
-  <% @books.each do |book| %>
-    <li><%= link_to book.id, book %> : <%= book.title %></li>
-  <% end %>
+  <div class="container">
+      <div class="row ustify-content-center">
+        <% @books.each do |book| %>
+          <div class="col-sm-4 col-md-3 col-lg-2 col-4 mb-4">
+            <div>
+              <%= link_to book do%>   
+                <div style="height:200px; margin: 0 auto;">
+                  <%= image_tag book.image.url if book.image? %>
+                </div>
+               <% end %> 
+             <div style="text-align: center;">
+               <%= link_to book.title, book %> 
+             </div>
+              <%= render 'favorites/favorite_button', book: book %>   
+            </div> 
+          </div>
+        <% end %>
+      </div>
+    </div>
 </div>

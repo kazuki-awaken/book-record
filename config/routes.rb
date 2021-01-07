@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'favorites/create'
+  get 'favorites/destroy'
   root to: 'toppages#index'
   
   get 'login', to: 'sessions#new'
@@ -14,6 +16,9 @@ Rails.application.routes.draw do
     collection do
       get :own
       get :notyet
+      get :likes
     end
   end
+
+  resources :favorites, only: [:create, :destroy]
 end

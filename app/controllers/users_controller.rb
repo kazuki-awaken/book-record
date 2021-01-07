@@ -5,6 +5,8 @@ class UsersController < ApplicationController
     
   
   def show
+    @books = @user.books.where(status: true)
+    counts(@user)
   end
 
   def new
@@ -44,6 +46,7 @@ class UsersController < ApplicationController
     flash[:success] = '退会しました'
     redirect_to ("/")
   end
+
   
   private
 

@@ -1,4 +1,9 @@
-<%=render "layouts/navbar"%>
+
+ <%=render "layouts/navbar"%> 
+
+
+
+
   <div class="user-prof">
     <div class="prof-set">
       名前：<%= @user.name%>
@@ -11,8 +16,8 @@
     <div class="prof-set">
       <p>書籍数</p>
       <ul>
-        <li>所有書籍：</li>
-        <li>未所持書籍：</li>
+        <li>所有書籍：<%= @count_own %></li>
+        <li>未所持書籍：<%= @count_notyet %></li>
       </ul> 
     </div>
     

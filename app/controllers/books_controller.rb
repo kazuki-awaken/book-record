@@ -2,30 +2,24 @@ class BooksController < ApplicationController
   before_action :require_user_logged_in
   before_action :correct_user, only: [:show,:edit,:update,:destroy]
   
-  def own
-    @books = current_user.books.where(status: true)
-  end
   
-  def notyet
-    @books = current_user.books.where(status: false)
-  end
   
   def show
-
+    
     if @book.status == false
       @status = "未所持"
     else
       @status = "所有済み"
     end
   end
-
+  
   def new
     @book = current_user.books.build
   end
-
+  
   def create
     @book = current_user.books.build(book_params)
-
+    
     if @book.save
       flash[:success] = '登録しました'
       redirect_to @book
@@ -34,10 +28,10 @@ class BooksController < ApplicationController
       render :new
     end
   end
-
+  
   def edit
   end
-
+  
   def update
     
     if @book.update(book_params)
@@ -48,11 +42,27 @@ class BooksController < ApplicationController
       render :edit
     end
   end
-
+  
   def destroy
     @book.destroy
     flash[:success] = '書籍を削除しました'
     redirect_to("/books/own")
+  end
+  
+  def own
+    @books = current_user.books.where(status: true)
+    counts(current_user)
+  end
+  
+  def notyet
+    @books = current_user.books.where(status: false)
+    counts(current_user)
+  end
+  
+  def likes
+    
+    @favorites = current_user.favoring
+    counts(current_user)
   end
   
   

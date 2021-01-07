@@ -31,3 +31,17 @@ header {
 body {
     background-color: rgb(246,239,219);
 }
+
+a {
+    text-decoration: none;
+    color: #565656
+}
+  
+a:hover {
+    color: #565656;
+}
+
+.image-style {
+    display: block;
+    margin: 0 auto;
+}

@@ -8,6 +8,24 @@ class User < ApplicationRecord
     
     has_many :books
     
+    has_many :favorites
+    has_many :favoring, through: :favorites, source: :book
+
+
+
+    def favor(book)
+        self.favorites.find_or_create_by(book_id: book.id)
+    end
+      
+    def dissolve(book)
+       favorite = self.favorites.find_by(book_id: book.id)
+       favorite.destroy if favorite
+    end
+    
+    def favoring?(book)
+       self.favoring.include?(book)
+    end
+    
 end
 
 

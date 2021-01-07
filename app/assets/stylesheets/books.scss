@@ -13,3 +13,9 @@
   background: -webkit-linear-gradient(top, #FFC778, #FFF);
   background: linear-gradient(to bottom, #FFC778, #FFF);
 }
+
+.check:focus {
+  border-color: none;
+  box-shadow: none;
+}
+

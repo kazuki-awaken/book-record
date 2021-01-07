@@ -1,5 +1,8 @@
 <%=render "layouts/navbar"%>
 <div class="user-prof">
+    <div style="height: 200px; margin-bottom: 150px;"%>
+      <%= image_tag (@book.image.thumb.url if @book.image?), class: "image-style"%>
+    </div>
     <div class="prof-set">
       名前：<%= @book.title%>
     </div>
@@ -16,9 +19,13 @@
       メモ：<%= @book.memo%>
     </div>
     
-    <div class="prof-set">
+    <%
+=begin%>
+ <div class="prof-set">
       表紙画像：<%= image_tag(@book.image.to_s) %>
-    </div>
+    </div> 
+<%
+=end%>
     
     <div>
       <%= link_to '書籍情報の変更', edit_book_path(@book)%>
