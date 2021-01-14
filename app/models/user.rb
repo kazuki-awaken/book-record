@@ -6,7 +6,7 @@ class User < ApplicationRecord
                       uniqueness: { case_sensitive: false }
     has_secure_password
     
-    has_many :books
+    has_many :books, :dependent => :destroy
     
     has_many :favorites
     has_many :favoring, through: :favorites, source: :book

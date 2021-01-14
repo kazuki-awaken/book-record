@@ -61,7 +61,7 @@ class BooksController < ApplicationController
   
   def likes
     
-    @favorites = current_user.favoring
+    @books = current_user.favoring
     counts(current_user)
   end
   

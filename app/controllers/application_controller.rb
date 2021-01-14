@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   
   include ApplicationHelper
+  include SessionsHelper
   
   private
 
@@ -11,7 +12,6 @@ class ApplicationController < ActionController::Base
   end
 
   def counts(user)
-    # @count_books = user.books.count
     @count_own = user.books.where(status: true).count
     @count_notyet = user.books.where(status: false).count
     @count_favorites = user.favoring.count

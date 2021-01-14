@@ -5,18 +5,18 @@ class UsersController < ApplicationController
     
   
   def show
-    @books = @user.books.where(status: true)
     counts(@user)
   end
 
   def new
-      @user = User.new
+    @user = User.new
   end
 
   def create
-      @user = User.new(user_params)
+    @user = User.new(user_params)
 
     if @user.save
+      log_in @user
       flash[:success] = 'ユーザを登録しました。'
       redirect_to @user
     else
@@ -41,7 +41,6 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    
     @user.destroy
     flash[:success] = '退会しました'
     redirect_to ("/")

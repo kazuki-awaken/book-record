@@ -1,8 +1,14 @@
 <%=render "layouts/navbar"%>
 <div class="user-prof">
+  <%if @book.image? %>
     <div style="height: 200px; margin-bottom: 150px;"%>
-      <%= image_tag (@book.image.thumb.url if @book.image?), class: "image-style"%>
+      <%= image_tag @book.image.thumb.url, class: "image-style"%> 
     </div>
+  <%else%>
+    <div style="height: 200px; margin-bottom: 150px;"%>
+      <%= image_tag "/assets/no_image.gif", class: "image-style", :size => '250x300'%> 
+    </div>
+  <%end%>  
     <div class="prof-set">
       名前：<%= @book.title%>
     </div>
@@ -10,7 +16,7 @@
       文庫名：<%= @book.library%>
     </div>
       
-      <!--登録した書籍の総数を表示予定-->
+      <!--登録した書籍の総数を表示-->
     <div class="prof-set">
       所有状況：<%= @status%>
     </div>
@@ -18,14 +24,6 @@
     <div class="prof-set">
       メモ：<%= @book.memo%>
     </div>
-    
-    <%
-=begin%>
- <div class="prof-set">
-      表紙画像：<%= image_tag(@book.image.to_s) %>
-    </div> 
-<%
-=end%>
     
     <div>
       <%= link_to '書籍情報の変更', edit_book_path(@book)%>
