@@ -49,8 +49,12 @@ class BooksController < ApplicationController
     redirect_to("/books/own")
   end
   
-  def own
-    @books = current_user.books.where(status: true)
+  def own 
+    @books = if params[:search]
+      current_user.books.where(status: true).search(params[:search])
+    else 
+      current_user.books.where(status: true)
+    end
     counts(current_user)
   end
   
@@ -70,7 +74,7 @@ class BooksController < ApplicationController
 
   # Strong Parameter
   def book_params
-    params.require(:book).permit(:title,:library,:memo,:image,:status)
+    params.require(:book).permit(:title,:library,:memo,:image,:status,:author)
   end
   
   

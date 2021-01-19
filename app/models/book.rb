@@ -13,4 +13,8 @@ class Book < ApplicationRecord
 
     has_many :reverses_of_favorite, class_name: 'Favorite', dependent: :destroy
     has_many :favored, through: :reverses_of_favorite, source: :user
+
+    def self.search(search)
+      search ? where('title LIKE ?', "%#{search}%") : all
+    end
 end

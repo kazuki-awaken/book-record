@@ -1,7 +1,10 @@
 <div id="gradation-image" class="mb-3">
-  <div class="font-select">
-    <p class="gradation-content">Book Record</p>
-    
+  <div>
+    <p class="gradation-content font-select">Book Record</p>
+    <%= form_tag(own_books_path, method: :get, class: "search_name" ) do %>
+      <%= text_field_tag :search %>
+      <%= submit_tag '検索', name: nil %>
+    <% end %>
   </div>
 </div>
 
@@ -12,6 +15,7 @@
 </ul>
 
 <div>
+
   <div class="container">
     <div class="row ustify-content-center">
       <% @books.each do |book| %>

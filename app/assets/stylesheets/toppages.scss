@@ -199,9 +199,17 @@ padding-left:60px;
 }
 
 
+// スクロールフェイドイン
+.fadein {
+  opacity: 0;
+  transform: translate(0,50px);
+  transition: all 600ms;
+}
 
-
-
+.fadein.scrollin {
+  opacity: 1;
+  transform: translate(0,0);
+}
 
 
 // メディアクエリ

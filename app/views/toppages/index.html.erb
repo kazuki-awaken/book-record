@@ -31,7 +31,7 @@
     <div class="function-list">
       <div class="container">
         <div class="row">
-          <div class="col-md-6 list-text align-self-center text_3">
+          <div class="col-md-6 list-text align-self-center text_3 fadein">
             <p class="list-text-title">書籍の登録</p>
             <p class="text-content">所有する書籍を登録することで、現在の所有状況の把握・確認が容易になり、あなたの本棚の整理に役立ちます。</p>
           </div>
@@ -46,7 +46,7 @@
           <div class="col-md-6 list-img">
             <img class="img_2" src="/assets/function-list2.jpg" alt="未所持の書籍を登録">
           </div>
-          <div class="col-md-6 list-text align-self-center text_2">
+          <div class="col-md-6 list-text align-self-center text_2 fadein">
             <p class="list-text-title">未所持の書籍を登録</p>
             <p class="text-content">未所持の書籍、あるいは、購入を予定している書籍を未所持として登録することで、気になる書籍の情報を記録として残すことができます。</p>
           </div>
@@ -55,7 +55,7 @@
       
       <div class="container">
         <div class="row">
-          <div class="col-md-6 list-text align-self-center text_3">
+          <div class="col-md-6 list-text align-self-center text_3 fadein">
             <p class="list-text-title">お気に入り機能</p>
             <p class="text-content">お気に入り機能が付いているので、あなたの心に残った書籍が一目瞭然になります。</p>
           </div>
@@ -70,9 +70,11 @@
   <p class="eye-chatch">あなたの読書ライフをより快適なものに</p>
   <div class="bottom-signup">
     <div class="bt-img">
-      <div class="bt-content">
+      <div class="bt-content fadein">
         <div>ご登録はこちらから</div>
-        <%= link_to "Signup", signup_path, class: "bottom-button font-select"%>
+        <div class="">
+          <%= link_to "Signup", signup_path, class: "bottom-button font-select"%>
+        </div>
       </div>
     </div>
   </div>
