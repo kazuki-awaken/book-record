@@ -59,13 +59,20 @@ class BooksController < ApplicationController
   end
   
   def notyet
-    @books = current_user.books.where(status: false)
+    @books = if params[:search]
+      current_user.books.where(status: false).search(params[:search])
+    else 
+      current_user.books.where(status: false)
+    end
     counts(current_user)
   end
   
   def likes
-    
-    @books = current_user.favoring
+    @books = if params[:search]
+      current_user.favoring.search(params[:search])
+    else 
+      current_user.favoring
+    end
     counts(current_user)
   end
   

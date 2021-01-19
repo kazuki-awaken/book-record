@@ -1,12 +1,3 @@
-<div id="gradation-image" class="mb-3">
-  <div>
-    <p class="gradation-content font-select">Book Record</p>
-    <%= form_tag(own_books_path, method: :get, class: "search_name" ) do %>
-      <%= text_field_tag :search %>
-      <%= submit_tag '検索', name: nil %>
-    <% end %>
-  </div>
-</div>
 
 <ul class="nav nav-tabs nav-justified mb-3">
   <li class="nav-item"><a href="<%= own_books_path %>" class="nav-link <%= 'active' if current_page?(own_books_path) %>">所有済み  <span class="badge badge-secondary"><%= @count_own %></span></a></li>
