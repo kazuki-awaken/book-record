@@ -214,6 +214,36 @@ padding-left:60px;
 
 // メディアクエリ
 @media screen and (max-width: 768px){
+  
+  #home {
+    min-height: 100vh;
+  }
+
+  .home-content {
+    padding:0; 
+  }
+
+  .brand-logo {
+    font-size: 2rem;
+    margin: 20px 0 0 20px;
+  }
+
+  .home-nav {
+    display: flex;
+    list-style: none;
+    margin-top: 20px;
+  }
+
+  .home-nav li {
+    margin-right:20px;
+  }
+  
+  .home-content h2 {
+    font-size: 6rem;
+    margin-bottom: 50px;
+  }
+  
+  
   .list-text-title {
     text-align: center;
   }
@@ -229,5 +259,54 @@ padding-left:60px;
   
   .text_2 {
     padding: 0;
+  }
+
+
+
+
+  .eye-chatch {
+    font-size: 23px;
+  }
+
+
+  .function-list-title span {
+    padding: 0 50px 2px 50px;
+    border-bottom: solid 2px #21252A;
+    font-size: 5rem;
+  }
+
+  .content-intro {
+    font-size: 1.5rem;
+    color: #565656;
+    font-weight: 800;
+    text-align: center;
+    margin-top: 100px;
+    padding-bottom: 90px;
+    border-bottom: solid 1px rgb(214,194,153);
+  }
+
+  .bottom-signup  {
+    padding: 100px 0 80px 0;
+    font-size: 2rem;
+    height: 700px;
+  }
+
+  .bt-img {
+    background-image: url('bottom-picture4.jpg');
+    width: 80%;
+    height: 450px;
+    margin: 0 auto;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+
+  .bt-content {
+    position: absolute;
+    top: 130px;
+    left: 30px;
+    text-align: center;
+    color: white;
   }
 }
