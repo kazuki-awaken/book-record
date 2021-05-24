@@ -251,6 +251,10 @@ padding-left:60px;
   .list-text {
     order: 2;
   }
+
+  .list-img {
+    padding-left:50px; 
+  }
   
   .list-img img {
     order: 1;
@@ -270,7 +274,7 @@ padding-left:60px;
 
 
   .function-list-title span {
-    padding: 0 50px 2px 50px;
+    padding: 0 40px 2px 40px;
     border-bottom: solid 2px #21252A;
     font-size: 4.5rem;
   }
