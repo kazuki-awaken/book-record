@@ -19,7 +19,7 @@
         <%= f.text_field :library, class: 'form-control' %>
       </div>
      
-      <div class="form-group">
+      <div class="form-group ">
         <%= f.label :image, '表紙画像' %>
         <%= f.file_field :image, class: 'form-control' %>
       </div>
@@ -29,12 +29,12 @@
         <%= f.check_box :status, class: 'form-control check' %>
       </div>
       
-      <div class="form-group">
+      <div class="form-group text-ps">
         <%= f.label :memo, 'メモ' %>
         <%= f.text_field :memo, class: 'form-control' %>
       </div>
      
-      <%= f.submit '登録する', class: 'btn btn-primary btn-block' %>
+      <%= f.submit '登録する', class: 'btn btn-primary btn-block btn-ps' %>
     <% end %>
   </div>
 </div>

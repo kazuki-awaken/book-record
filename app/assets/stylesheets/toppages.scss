@@ -212,7 +212,7 @@ padding-left:60px;
 }
 
 
-// メディアクエリ
+// メディアクエリ 768
 @media screen and (max-width: 768px){
   
   #home {
@@ -253,7 +253,7 @@ padding-left:60px;
   }
 
   .list-img {
-    padding-left:50px; 
+    padding-left:40px; 
   }
   
   .list-img img {
@@ -265,7 +265,9 @@ padding-left:60px;
     padding: 0;
   }
 
-
+  .home-content {
+    text-align: center;
+  }
 
 
   .eye-chatch {
@@ -313,4 +315,8 @@ padding-left:60px;
     text-align: center;
     color: white;
   }
+
+  //ログイン画面/
+  
+  
 }

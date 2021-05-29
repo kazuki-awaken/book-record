@@ -10,7 +10,7 @@
   <div class="container">
     <div class="row ustify-content-center">
       <% @books.each do |book| %>
-        <div class="col-sm-4 col-md-3 col-lg-2 col-4 mb-4">
+        <div class="col-sm-4 col-md-3 col-lg-2 col-4 mb-4 image-ps">
           <div style="text-align: center;">
             <%= link_to book do%>
               <%if book.image? %>   
@@ -19,7 +19,7 @@
               
               <%else%>
               
-                <%= image_tag "/assets/no_image.gif", :size => '136x200'%>
+                <%= image_tag "/assets/no_image.gif", :size => '125x200'%>
               
               <%end%>
             <% end %> 

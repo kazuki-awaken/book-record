@@ -24,3 +24,26 @@
   text-align: right;
   padding-right: 5px;
 }
+
+// レスポンシブ
+@media screen and (max-width: 768px){
+
+  .search_name {
+    text-align: center;
+    padding-right: 0px; 
+  }
+
+  .nav-link {
+    display: block;
+    padding: .5rem .7rem;
+  }
+
+  .offset-2 {
+    margin-left: 16.666667%;
+    padding-left: 1px;
+  }
+
+  .image-ps {
+    padding-left: 0px!important;
+  }
+}
